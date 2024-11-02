@@ -1,13 +1,15 @@
 .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
     text-align: center; /* Centra el texto */
 }
 
 .imagen-redonda {
-    width: 150px; /* Tamaño de la imagen */
-    height: 150px; /* Mantiene la proporción */
+    width: 200px; /* Tamaño de la imagen */
+    height: 200px; /* Mantiene la proporción */
     border-radius: 50%; /* Hace que la imagen sea redonda */
     object-fit: cover; /* Ajusta la imagen */
-    border: 5px solid #333; /* Borde alrededor de la imagen */
+    border: 5px solid #FF6500; /* Borde alrededor de la imagen */
 }
 
 h1 {
