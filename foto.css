@@ -1,0 +1,20 @@
+.container {
+    text-align: center; /* Centra el texto */
+}
+
+.imagen-redonda {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px; /* Mantiene la proporción */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Ajusta la imagen */
+    border: 5px solid #333; /* Borde alrededor de la imagen */
+}
+
+h1 {
+    margin: 10px 0; /* Margen para el título */
+}
+
+p {
+    color: #555; /* Color del texto */
+    margin: 5px 0; /* Margen para los párrafos */
+}
