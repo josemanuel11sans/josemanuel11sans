@@ -73,7 +73,7 @@ section{
     font-size: 40px;
 }
 #inicio p{
-    width: 650px;
+    /* width: 650px; */
     font-size: 20px;
     line-height: 24px;
     color: #dbd3d3d7;
@@ -158,6 +158,10 @@ footer{
     background-color: #1E3E62   ;
     text-align: center;
     padding: 20px;
+}
+
+footer p{
+    color: #fff;
 }
 /* indicador */
 .indicador{
