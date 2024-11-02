@@ -1,4 +1,4 @@
-# Portafolio de [Tu Nombre]
+# Portafolio de Jose Manuel Sanchez Saldaña
 
 ¡Bienvenido a mi portafolio! Soy un estudiante de Gestión y Desarrollo de Software con una pasión por la tecnología y el aprendizaje continuo. Este portafolio muestra una selección de mis proyectos y habilidades en el campo del desarrollo de software.
 
