@@ -22,9 +22,8 @@ Mi objetivo es demostrar mis capacidades como desarrollador y mi compromiso con 
 
 Si deseas ponerte en contacto conmigo, puedes encontrarme en:
 
-- **Correo electrónico**: [tuemail@example.com]
-- **LinkedIn**: [tu perfil de LinkedIn]
-- **GitHub**: [tu perfil de GitHub]
+- **Correo electrónico**: [sanchezsaldana89@gmail.com]
+- **LinkedIn**: [https://www.linkedin.com/in/jose-manuel-s%C3%A1nchez-salda%C3%B1a-660248282/]
 
 Gracias por visitar mi portafolio. ¡Espero que lo disfrutes!
 
