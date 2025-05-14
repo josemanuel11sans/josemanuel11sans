@@ -174,31 +174,31 @@ window.addEventListener('load', checkScroll);
 window.addEventListener('scroll', checkScroll);
 
 // Form submission
-const contactForm = document.getElementById('contactForm');
+// const contactForm = document.getElementById('contactForm');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// if (contactForm) {
+//     contactForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
         
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+//         // Get form values
+//         const name = document.getElementById('name').value;
+//         const email = document.getElementById('email').value;
+//         const subject = document.getElementById('subject').value;
+//         const message = document.getElementById('message').value;
         
-        // Here you would typically send the form data to a server
-        // For demonstration, we'll just log it and show an alert
-        console.log({
-            name,
-            email,
-            subject,
-            message
-        });
+//         // Here you would typically send the form data to a server
+//         // For demonstration, we'll just log it and show an alert
+//         console.log({
+//             name,
+//             email,
+//             subject,
+//             message
+//         });
         
-        alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
-        contactForm.reset();
-    });
-}
+//         alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
+//         contactForm.reset();
+//     });
+// }
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

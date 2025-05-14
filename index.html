@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-    
+
     <header>
         <div class="container">
             <nav>
@@ -79,17 +81,23 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-img-container">
-                        <div class="about-img"> <img style="box-shadow: var(--shadow-lg); border-radius: var(--border-radius-lg);"  src="./computer-monitor-showing-source-code.jpg" alt=""></div>
+                        <div class="about-img"> <img
+                                style="box-shadow: var(--shadow-lg); border-radius: var(--border-radius-lg);"
+                                src="./computer-monitor-showing-source-code.jpg" alt=""></div>
                         <div class="experience-badge">
-                            <span>5+</span>
+                            <span>2+</span>
                             <p>Años de Experiencia</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-text">
                     <h3>Estudiante de Gestión y Desarrollo de Software con pasión por aprender</h3>
-                    <p>Soy un estudiante de 20 años de México, apasionado por la programación y las nuevas tecnologías. Actualmente estudio Gestión y Desarrollo de Software, con el objetivo de crear soluciones digitales que transformen el mundo.</p>
-                    <p>Me especializo en el desarrollo de aplicaciones escalables y eficientes, utilizando herramientas como React, Spring Boot y AWS. Siempre busco integrar tecnologías modernas en proyectos reales, con un enfoque en la calidad y la experiencia del usuario.</p>
+                    <p>Soy un estudiante de 20 años de México, apasionado por la programación y las nuevas tecnologías.
+                        Actualmente estudio Gestión y Desarrollo de Software, con el objetivo de crear soluciones
+                        digitales que transformen el mundo.</p>
+                    <p>Me especializo en el desarrollo de aplicaciones escalables y eficientes, utilizando herramientas
+                        como React, Spring Boot y AWS. Siempre busco integrar tecnologías modernas en proyectos reales,
+                        con un enfoque en la calidad y la experiencia del usuario.</p>
                     <div class="about-stats">
                         <div class="stat-item">
                             <div class="stat-icon">
@@ -343,13 +351,14 @@
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Móvil</button>
-                <button class="filter-btn" data-filter="other">Otros</button>
+                <button class="filter-btn" data-filter="ia">IA</button>
+                <!-- <button class="filter-btn" data-filter="other">Otros</button> -->
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/FF6B6B/FFFFFF" alt="E-commerce Platform">
+                        <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747112750/Login_oegfxd.png"
+                            alt="E-commerce Platform">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-link"></i></a>
@@ -360,40 +369,25 @@
                     <div class="project-info">
                         <div class="project-tags">
                             <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <h3>Plataforma E-commerce</h3>
-                        <p>Solución completa de comercio electrónico con integración de pagos, gestión de inventario y panel de análisis.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="mobile">
-                    <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/4ECDC4/FFFFFF" alt="Fitness App">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
+                            <span>Spring Boot</span>
+                            <span>AWS</span>
                             <span>React Native</span>
-                            <span>Firebase</span>
-                            <span>Redux</span>
                         </div>
-                        <h3>App de Fitness</h3>
-                        <p>Aplicación móvil para seguimiento de entrenamientos, nutrición y progreso con recomendaciones personalizadas.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
+                        <h3>AssetTrackerUtez</h3>
+                        <p>Sistema de gestión de inventarios para la Universidad Utez que utiliza AWS para gestionar
+                            información en la nube, React para la interfaz gráfica y Spring Boot con Spring Security
+                            para el backend.
+                        </p>
+                        <p>La aplicación móvil en React Native permite escanear códigos de barras para mapear todos los
+                            artículos de la universidad, manejando información de responsables, aulas y edificios.</p>
+                        <a href="#" class="project-btn">Ver Material</a>
                     </div>
                 </div>
-                
+
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/FF9F1C/FFFFFF" alt="Project Management Tool">
+                        <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.44.28_PM_xintlx.jpg"
+                            alt="Fitness App">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-link"></i></a>
@@ -403,41 +397,80 @@
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
-                            <span>Vue.js</span>
+                            <span>Java Servlets</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <span>HTML</span>
+                            <span>SQL</span>
+                        </div>
+                        <h3>Triks</h3>
+                        <p>Sistema de gestión de cursos de inducción desarrollado con Java Servlets. Permite gestionar a
+                            los alumnos de nuevo ingreso y asignarlos a aulas para sus cursos.</p>
+                        <p>Los profesores pueden asignar calificaciones al final del curso y administrar listas de
+                            asistencia. Los administradores pueden crear y asignar nuevos grupos, aspirantes y maestros
+                            en diferentes carreras.</p>
+                        <a href="#" class="project-btn">Ver Material</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ia">
+                    <div class="project-img">
+                        <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747191409/creaturas_fjhrpq.png"
+                            alt="Project Management Tool">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Sprinng Boot</span>
+                            <span>AWS</span>
+                            <span>SQL</span>
+                            <span>IA</span>
+                        </div>
+                        <h3>KNN - Identificador de Criaturas</h3>
+                        <p>Sistema basado en el algoritmo KNN (K-Nearest Neighbors) para la identificación de animales.
+                            El usuario ingresa características de un animal sin especificar cuál es, y el sistema
+                            determina a qué animal se parece más.</p>
+                        <p>El algoritmo calcula la probabilidad de acierto basándose en las características
+                            proporcionadas, demostrando la aplicación práctica de técnicas de machine learning.</p>
+                        <a href="#" class="project-btn">Ver Material</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747192141/porp_1_enodye.png"
+                            alt="AI Chatbot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>MongoDB</span>
                             <span>Express</span>
-                            <span>PostgreSQL</span>
                         </div>
-                        <h3>Herramienta de Gestión de Proyectos</h3>
-                        <p>Plataforma colaborativa de gestión de proyectos con actualizaciones en tiempo real, asignación de tareas y seguimiento de progreso.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
+                        <h3>Prop Manager</h3>
+                        <p>Aplicación web que implementa operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para
+                            gestionar un catálogo de casas con imágenes.</p>
+                        <p>Desarrollado con Express.js como framework de backend y MongoDB como base de datos, este
+                            proyecto demuestra la implementación de una arquitectura moderna para aplicaciones web.</p>
+                        <a href="#" class="project-btn">Ver Material</a>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="other">
-                    <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/A06CD5/FFFFFF" alt="AI Chatbot">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>NLP</span>
-                        </div>
-                        <h3>Chatbot de Atención al Cliente</h3>
-                        <p>Chatbot inteligente que maneja consultas de clientes, procesa pedidos y proporciona recomendaciones personalizadas.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
-                    </div>
-                </div>
-                
+
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/3D84A8/FFFFFF" alt="Learning Management System">
+                        <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747192985/car_2_neoikc.png" alt="Learning Management System">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-link"></i></a>
@@ -447,17 +480,24 @@
                     </div>
                     <div class="project-info">
                         <div class="project-tags">
-                            <span>Angular</span>
-                            <span>Django</span>
-                            <span>MySQL</span>
+                            <span>Spring boot</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+
                         </div>
-                        <h3>Sistema de Gestión de Aprendizaje</h3>
-                        <p>Plataforma educativa con creación de cursos, gestión de estudiantes y seguimiento de progreso.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
+                        <h3>Sistema gestor de vehiculos</h3>
+                        <p>El Sistema de Gestión de Vehículos es una plataforma web diseñada para administrar de forma
+                            eficiente el control de usuarios, vehículos, servicios automotrices y categorías de
+                            servicio. </p>
+                        <p>Permite registrar y gestionar usuarios así como los autos asociados a
+                            cada uno. Además, se pueden registrar servicios realizados a los vehículos, clasificándolos
+                            según categorías (como mantenimiento, reparación, diagnóstico, entre otros),</p>
+                        <a href="#" class="project-btn">Ver Material</a>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="mobile">
+
+                <!-- <div class="project-card" data-category="mobile">
                     <div class="project-img">
                         <img src="https://via.placeholder.com/600x400/FF6B6B/FFFFFF" alt="Food Delivery App">
                         <div class="project-overlay">
@@ -474,10 +514,11 @@
                             <span>Google Maps API</span>
                         </div>
                         <h3>App de Entrega de Comida</h3>
-                        <p>Aplicación móvil que conecta usuarios con restaurantes locales, con seguimiento de pedidos en tiempo real y procesamiento de pagos.</p>
-                        <a href="#" class="project-btn">Ver Detalles</a>
+                        <p>Aplicación móvil que conecta usuarios con restaurantes locales, con seguimiento de pedidos en
+                            tiempo real y procesamiento de pagos.</p>
+                        <a href="#" class="project-btn">Ver Material</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="projects-bg">
@@ -509,7 +550,7 @@
                         </div>
                         <div class="contact-card-info">
                             <h3>Teléfono</h3>
-                            <p>+52  (777) 445 72 53</p>
+                            <p>+52 (777) 445 72 53</p>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -522,14 +563,17 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jose-manuel-sánchez-saldaña-660248282/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/josemanuel11sans" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jose-manuel-sánchez-saldaña-660248282/"
+                            class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/josemanuel11sans" class="social-link"><i
+                                class="fab fa-github"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/jos_sann?igsh=MXY5YzVtMGI0eWNwdQ==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/jos_sann?igsh=MXY5YzVtMGI0eWNwdQ==" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xrbqodpd" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="" required>
                             <label for="name">Nombre</label>
@@ -538,10 +582,10 @@
                             <input type="email" id="email" name="email" placeholder="" required>
                             <label for="email">Email</label>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <input type="text" id="subject" name="subject" placeholder="" required>
                             <label for="subject">Asunto</label>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="" required></textarea>
                             <label for="message">Mensaje</label>
@@ -580,4 +624,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
