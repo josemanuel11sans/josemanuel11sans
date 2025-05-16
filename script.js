@@ -174,31 +174,14 @@ window.addEventListener('load', checkScroll);
 window.addEventListener('scroll', checkScroll);
 
 // Form submission
-// const contactForm = document.getElementById('contactForm');
+const contactForm = document.getElementById('contactForm');
 
-// if (contactForm) {
-//     contactForm.addEventListener('submit', function(e) {
-//         e.preventDefault();
-        
-//         // Get form values
-//         const name = document.getElementById('name').value;
-//         const email = document.getElementById('email').value;
-//         const subject = document.getElementById('subject').value;
-//         const message = document.getElementById('message').value;
-        
-//         // Here you would typically send the form data to a server
-//         // For demonstration, we'll just log it and show an alert
-//         console.log({
-//             name,
-//             email,
-//             subject,
-//             message
-//         });
-        
-//         alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
-//         contactForm.reset();
-//     });
-// }
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Form submission is handled by formspree
+        console.log('Form submitted');
+    });
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -235,3 +218,224 @@ if (typingElement) {
     // Start typing animation after a delay
     setTimeout(typeWriter, 1000);
 }
+
+// Gallery Modal
+const galleryModal = document.getElementById('galleryModal');
+const projectBtns = document.querySelectorAll('.project-btn');
+const closeModal = document.querySelector('.close-modal');
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryTabContents = document.querySelectorAll('.gallery-tab-content');
+const galleryGrid = document.querySelector('.gallery-grid');
+const videoContainer = document.querySelector('.video-container');
+
+// Project gallery data
+const projectGalleries = {
+    assettracker: {
+        images: [
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747112750/Login_oegfxd.png',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.43.15_PM_j6schg.jpg',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.43.43_PM_r2upiu.jpg',
+            //'https://res.cloudinary.com/dic186agm/image/upload/v1743836381/una33gtasapz3fj4wnwf.png'
+        ],
+        videos: [
+            'https://res.cloudinary.com/dic186agm/video/upload/v1747190734/WhatsApp_Video_2025-05-13_at_8.43.42_PM_zomdf5.mp4',
+            'https://res.cloudinary.com/dic186agm/video/upload/v1747429929/Grabaci%C3%B3n_de_pantalla_2025-03-10_213924_hekdwy.mp4'
+        ]
+    },
+    triks: {
+        images: [
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.44.28_PM_xintlx.jpg',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.44.28_PM_1_y9vmuy.jpg',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1743836326/oh9yw5b4akoyopb39rqw.png',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747430140/WhatsApp_Image_2025-05-12_at_10.14.39_PM_wo6xou.jpg'
+        ],
+        videos: [
+            // 'https://res.cloudinary.com/dic186agm/video/upload/v1747190733/demo-triks.mp4'
+        ]
+    },
+    knn: {
+        images: [
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747191409/creaturas_fjhrpq.png',
+            // '',
+            // 'https://res.cloudinary.com/dic186agm/image/upload/v1747191409/creaturas3_fjhrpq.png'
+        ],
+        videos: [
+            // 'https://res.cloudinary.com/dic186agm/video/upload/v1747191409/demo-knn.mp4'
+        ]
+    },
+    propmanager: {
+        images: [
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192141/porp_1_enodye.png',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192141/porp_2_enodye.png',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192141/porp_3_enodye.png'
+        ],
+        videos: [
+            'https://res.cloudinary.com/dic186agm/video/upload/v1747430575/Grabaci%C3%B3n_de_pantalla_2025-03-31_214122_rhrsyp.mp4'
+        ]
+    },
+    carmanager: {
+        images: [
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192985/car_2_neoikc.png',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192945/WhatsApp_Image_2025-05-13_at_8.44.28_PM_2_ushdze.jpg',
+            'https://res.cloudinary.com/dic186agm/image/upload/v1747192891/lonig_carros_mtw5mg.png'
+        ],
+        videos: [
+            // '    https://res.cloudinary.com/dic186agm/video/upload/v1747192985/demo-carmanager.mp4'
+        ]
+    }
+};
+
+// Current project and gallery state
+let currentProject = '';
+let currentImageIndex = 0;
+let currentVideoIndex = 0;
+
+// Open gallery modal
+projectBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentProject = btn.getAttribute('data-project');
+        
+        if (projectGalleries[currentProject]) {
+            openGallery(currentProject);
+        }
+    });
+});
+
+// Close gallery modal
+closeModal.addEventListener('click', () => {
+    galleryModal.classList.remove('active');
+    setTimeout(() => {
+        galleryModal.style.display = 'none';
+    }, 300);
+});
+
+// Close modal when clicking outside content
+galleryModal.addEventListener('click', (e) => {
+    if (e.target === galleryModal) {
+        closeModal.click();
+    }
+});
+
+// Switch gallery tabs
+galleryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        galleryTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const tabTarget = tab.getAttribute('data-tab');
+        galleryTabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === tabTarget) {
+                content.classList.add('active');
+            }
+        });
+    });
+});
+
+// Open gallery with project content
+function openGallery(projectId) {
+    const project = projectGalleries[projectId];
+    
+    if (!project) return;
+    
+    // Reset indices
+    currentImageIndex = 0;
+    currentVideoIndex = 0;
+    
+    // Load images
+    galleryGrid.innerHTML = '';
+    project.images.forEach((img, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `<img src="${img}" alt="Project Image ${index + 1}">`;
+        galleryGrid.appendChild(galleryItem);
+    });
+    
+    // Load first video
+    loadVideo(project.videos[0]);
+    
+    // Show modal
+    galleryModal.style.display = 'block';
+    setTimeout(() => {
+        galleryModal.classList.add('active');
+    }, 10);
+    
+    // Set first tab as active
+    galleryTabs[0].click();
+    
+    // Setup navigation
+    setupGalleryNavigation(project);
+}
+
+// Load video into container
+function loadVideo(videoUrl) {
+    if (!videoUrl) {
+        videoContainer.innerHTML = '<p style="color: white;">No video available</p>';
+        return;
+    }
+    
+    videoContainer.innerHTML = `
+        <video controls>
+            <source src="${videoUrl}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    `;
+}
+
+// Setup gallery navigation
+function setupGalleryNavigation(project) {
+    const prevBtns = document.querySelectorAll('.gallery-nav-btn.prev');
+    const nextBtns = document.querySelectorAll('.gallery-nav-btn.next');
+    
+    // Images navigation
+    prevBtns[0].addEventListener('click', () => {
+        if (project.images.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+        updateGalleryView('images', project);
+    });
+    
+    nextBtns[0].addEventListener('click', () => {
+        if (project.images.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex + 1) % project.images.length;
+        updateGalleryView('images', project);
+    });
+    
+    // Videos navigation
+    prevBtns[1].addEventListener('click', () => {
+        if (project.videos.length <= 1) return;
+        
+        currentVideoIndex = (currentVideoIndex - 1 + project.videos.length) % project.videos.length;
+        updateGalleryView('videos', project);
+    });
+    
+    nextBtns[1].addEventListener('click', () => {
+        if (project.videos.length <= 1) return;
+        
+        currentVideoIndex = (currentVideoIndex + 1) % project.videos.length;
+        updateGalleryView('videos', project);
+    });
+}
+
+// Update gallery view based on current indices
+function updateGalleryView(type, project) {
+    if (type === 'images') {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item, index) => {
+            if (index === currentImageIndex) {
+                item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    } else if (type === 'videos') {
+        loadVideo(project.videos[currentVideoIndex]);
+    }
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal.click();
+    }
+});

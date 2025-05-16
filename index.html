@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,37 @@
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
+
+    <!-- Modal Gallery -->
+    <div class="gallery-modal" id="galleryModal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-tab="images">Imágenes</button>
+                <button class="gallery-tab" data-tab="videos">Videos</button>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-tab-content active" id="images">
+                    <div class="gallery-grid">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                    <div class="gallery-navigation">
+                        <button class="gallery-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="gallery-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="gallery-tab-content" id="videos">
+                    <div class="video-container">
+                        <!-- Videos will be loaded dynamically -->
+                    </div>
+                    <div class="gallery-navigation">
+                        <button class="gallery-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="gallery-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header>
         <div class="container">
@@ -352,10 +383,9 @@
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="ia">IA</button>
-                <!-- <button class="filter-btn" data-filter="other">Otros</button> -->
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-project-id="assettracker">
                     <div class="project-img">
                         <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747112750/Login_oegfxd.png"
                             alt="E-commerce Platform">
@@ -380,11 +410,11 @@
                         </p>
                         <p>La aplicación móvil en React Native permite escanear códigos de barras para mapear todos los
                             artículos de la universidad, manejando información de responsables, aulas y edificios.</p>
-                        <a href="#" class="project-btn">Ver Material</a>
+                        <a href="#" class="project-btn" data-project="assettracker">Ver Material</a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-project-id="triks">
                     <div class="project-img">
                         <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747190733/WhatsApp_Image_2025-05-13_at_8.44.28_PM_xintlx.jpg"
                             alt="Fitness App">
@@ -409,11 +439,11 @@
                         <p>Los profesores pueden asignar calificaciones al final del curso y administrar listas de
                             asistencia. Los administradores pueden crear y asignar nuevos grupos, aspirantes y maestros
                             en diferentes carreras.</p>
-                        <a href="#" class="project-btn">Ver Material</a>
+                        <a href="#" class="project-btn" data-project="triks">Ver Material</a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="ia">
+                <div class="project-card" data-category="ia" data-project-id="knn">
                     <div class="project-img">
                         <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747191409/creaturas_fjhrpq.png"
                             alt="Project Management Tool">
@@ -438,11 +468,11 @@
                             determina a qué animal se parece más.</p>
                         <p>El algoritmo calcula la probabilidad de acierto basándose en las características
                             proporcionadas, demostrando la aplicación práctica de técnicas de machine learning.</p>
-                        <a href="#" class="project-btn">Ver Material</a>
+                        <a href="#" class="project-btn" data-project="knn">Ver Material</a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-project-id="propmanager">
                     <div class="project-img">
                         <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747192141/porp_1_enodye.png"
                             alt="AI Chatbot">
@@ -464,11 +494,11 @@
                             gestionar un catálogo de casas con imágenes.</p>
                         <p>Desarrollado con Express.js como framework de backend y MongoDB como base de datos, este
                             proyecto demuestra la implementación de una arquitectura moderna para aplicaciones web.</p>
-                        <a href="#" class="project-btn">Ver Material</a>
+                        <a href="#" class="project-btn" data-project="propmanager">Ver Material</a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-project-id="carmanager">
                     <div class="project-img">
                         <img src="https://res.cloudinary.com/dic186agm/image/upload/v1747192985/car_2_neoikc.png" alt="Learning Management System">
                         <div class="project-overlay">
@@ -484,7 +514,6 @@
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
-
                         </div>
                         <h3>Sistema gestor de vehiculos</h3>
                         <p>El Sistema de Gestión de Vehículos es una plataforma web diseñada para administrar de forma
@@ -493,32 +522,9 @@
                         <p>Permite registrar y gestionar usuarios así como los autos asociados a
                             cada uno. Además, se pueden registrar servicios realizados a los vehículos, clasificándolos
                             según categorías (como mantenimiento, reparación, diagnóstico, entre otros),</p>
-                        <a href="#" class="project-btn">Ver Material</a>
+                        <a href="#" class="project-btn" data-project="carmanager">Ver Material</a>
                     </div>
                 </div>
-
-                <!-- <div class="project-card" data-category="mobile">
-                    <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400/FF6B6B/FFFFFF" alt="Food Delivery App">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Google Maps API</span>
-                        </div>
-                        <h3>App de Entrega de Comida</h3>
-                        <p>Aplicación móvil que conecta usuarios con restaurantes locales, con seguimiento de pedidos en
-                            tiempo real y procesamiento de pagos.</p>
-                        <a href="#" class="project-btn">Ver Material</a>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="projects-bg">
@@ -582,10 +588,6 @@
                             <input type="email" id="email" name="email" placeholder="" required>
                             <label for="email">Email</label>
                         </div>
-                        <!-- <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="" required>
-                            <label for="subject">Asunto</label>
-                        </div> -->
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="" required></textarea>
                             <label for="message">Mensaje</label>
