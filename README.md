@@ -11,8 +11,12 @@ En este portafolio, he incluido:
   - Control de versiones con Git
   - Desarrollo de aplicaciones en Spring con Java
   - Diseño de aplicaciones con Kotlin
-  - Gestión de bases de datos en SQL
+  - Bases de datos: SQL • MongoDB
   - Estándares y métricas en desarrollo de software
+  - Backend JS: Express.js
+  - Infraestructura: Linux • AWS
+  - DevOps / Cloud: Docker, CI/CD
+  - Frontend y móvil: React • React Native
 
 ## Objetivo
 
